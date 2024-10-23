@@ -10,4 +10,4 @@ COPY optscale_client/rest_api_client optscale_client/rest_api_client
 RUN pip install --no-cache-dir -r rest_api/test-requirements.txt
 COPY rest_api/rest_api_server/tests rest_api/rest_api_server/tests
 COPY rest_api/prepare_clickhouse_local.sh rest_api/prepare_clickhouse_local.sh
-COPY --from=clickhouse /usr/bin/clickhouse /usr/bin/clickhouse
+COPY --from=clickhouse /usr/bin/clickhouse rest_api/.clickhouse/clickhouse
